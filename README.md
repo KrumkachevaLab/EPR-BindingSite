@@ -1,4 +1,4 @@
-Please note that while the provided code is not adapted for easy setup on different computers yet.
+Please note that the provided code is not adapted for easy setup on different computers yet.
 # To-Do
 1. Fix the relationship between different files
 2. Provide an example of the calculations (HSA-TCPP)
