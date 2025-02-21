@@ -13,8 +13,10 @@ After installing AutoDock-GPU, make sure to specify the path to its executable f
 For Docking and Spin Label Modeling:
 
 - MDAnalysis
+- Acpype (https://github.com/alanwilter/acpype)
+- RDKit
 - Numpy
-- ChiLife (available at https://github.com/StollLab/chiLife)
+- ChiLife (https://github.com/StollLab/chiLife)
 - SciPy
 - Scikit-learn (SkLearn)
 
