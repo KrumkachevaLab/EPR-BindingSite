@@ -1,7 +1,11 @@
+Please note that while the provided code is not adapted for easy setup on different computers yet.
+# To-Do
+1. Fix the relationship between different files
+2. Provide an example of the calculations (HSA-TCPP)
 # Protein-Ligand Binding Site Identification Based on Dipolar EPR Experiments
 This project contains Jupyter Notebooks designed to identify binding sites in protein-ligand complexes using dipolar EPR distance distributions. The methodology is based on the approach described in the upcoming publication "Enhanced Binding Site Detection in Protein-Ligand Complexes with a Combined Blind Docking and Dipolar EPR Approach" (to be published).
 
-Please note that while the code provided is functional, this repository is still a work in progress and will continue to be updated.
+
 ## Repository Contents
 This repository includes three Jupyter Notebooks used for the binding site identification using dipolar EPR data.
 ## Required Software
