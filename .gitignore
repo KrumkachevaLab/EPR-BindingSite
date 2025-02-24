@@ -1,0 +1,5 @@
+cluster*pdb*
+run*pdb*
+*site1
+*acpype
+Scripts/vina_scripts/*

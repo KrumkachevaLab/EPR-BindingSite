@@ -1,3 +1,4 @@
+# Run AutoDock-GPU
 import numpy as np
 import sys
 import os
@@ -6,8 +7,8 @@ import subprocess
 
 protein = sys.argv[1]
 ligand = sys.argv[2]
-nrun = int(sys.argv[3])
-ifgenrun = int(sys.argv[4])
+nrun = int(sys.argv[3]) # Number of runs
+ifgenrun = int(sys.argv[4]) # If generate pdb files, set to 1=True in the main notebook
 
 if len(sys.argv)>5:
 	FOLDNAME = sys.argv[5]
@@ -27,12 +28,16 @@ print(centers)
 i=0
 for cent in centers	:
 	os.chdir(f"{FOLDNAME}{i+1}")
+
+	# Commands for running Autodock-GPU
 	print(f"adgpu --lfile {i+1}_{ligand} --ffile {i+1}_{protname}.maps.fld --gbest 1 --npdb {ifgenrun} --nrun {nrun} -p 2048 --rmstol 3 --derivtype Zn=ZN")
 	if HEURMAX is None:
 		os.system(f"adgpu --lfile {i+1}_{ligand} --ffile {i+1}_{protname}.maps.fld --gbest 1 --npdb {ifgenrun} --nrun {nrun} -p 2048 --rmstol 3 --derivtype Zn=ZN")
 	else:
 		os.system(f"adgpu --lfile {i+1}_{ligand} --ffile {i+1}_{protname}.maps.fld --gbest 1 --npdb {ifgenrun} --nrun {nrun} -p 2048 --rmstol 3 --derivtype Zn=ZN  --heurmax {HEURMAX}")
 	os.system("echo Autodock finished!")
+	
+	# Generate cluster files contatining information about their energy and population
 	energy = subprocess.getoutput("awk '/RANKING/ {if ($1==1 && $2==1) print $4;}' *.dlg")
 	os.system(f"cp best.pdbqt ../{i+1}_best_{energy}.pdbqt")
 	print(energy)
@@ -58,6 +63,7 @@ for cent in centers	:
 		run_energy[idx] = cl[2].split("=")[1].replace('"','')
 		run[idx] = cl[3].split("=")[1].replace('"','')
 		nclust[idx] = cl[5].split("=")[1].replace("/>",'').replace('"','')
+		# Generate final blind docking poses in format cluster{index}_{energy of the pose}_p{population of the pose}
 		os.system(f"cp run{run[idx]}_{format(run_energy[idx],'.2f')}.pdbqt cluster{cluster[idx]}_{run_energy[idx]}_p{nclust[idx]}.pdbqt")
 	os.chdir("..")
 	i+=1
