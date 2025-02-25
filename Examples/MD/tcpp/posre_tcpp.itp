@@ -1,4 +1,4 @@
-; posre_tcpp.itp created by acpype (v: 2023.11.14) on Mon Feb 24 18:31:27 2025
+; posre_tcpp.itp created by acpype (v: 2023.11.14) on Tue Feb 25 17:39:12 2025
 
 [ position_restraints ]
 ; atom  type      fx      fy      fz

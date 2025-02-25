@@ -1,8 +1,7 @@
-This version of the repository contains an example script of the HSA-TCPP docking (Examples/TCPP). The script soon will be updated to include additional EPR data integration.
+This version of the repository contains an example script of the HSA-TCPP docking (Examples/TCPP). Two notebooks describe both blind and focused docking with the comparison with experimental EPR data.
 
 # To-Do
-1. Complete an example of the calculations (HSA-TCPP)
-2. Include a finished script for the modeling of distance distributions based on the MD trajectory
+1. Include a finished script for the modeling of distance distributions based on the MD trajectory
 # Protein-Ligand Binding Site Identification Based on Dipolar EPR Experiments
 This project contains Jupyter Notebooks designed to identify binding sites in protein-ligand complexes using dipolar EPR distance distributions. The methodology is based on the approach described in the upcoming publication "Enhanced Binding Site Detection in Protein-Ligand Complexes with a Combined Blind Docking and Dipolar EPR Approach" (to be published).
 ![alt text](preview.png)
@@ -42,6 +41,7 @@ This workflow is designed to run on Linux
 mapwater.py (for hydrated docking)
 prepare_gpf.py
 prepare_gpfzn.py (for docking with Zn)
+prepare_flexreceptor.py (for flexible docking)
 ```
 4. Install acpype from above-mentioned fork
 5. Create conda environment with required packages using `conda create` or `mamba create`
