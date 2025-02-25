@@ -1,4 +1,4 @@
-This version of the repository contains an example script of the HSA-TCPP docking. The script soon will be updated to include additional EPR data integration.
+This version of the repository contains an example script of the HSA-TCPP docking (Examples/TCPP). The script soon will be updated to include additional EPR data integration.
 
 # To-Do
 1. Complete an example of the calculations (HSA-TCPP)
