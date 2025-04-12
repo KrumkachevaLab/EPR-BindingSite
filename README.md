@@ -1,10 +1,10 @@
+This project contains Jupyter Notebooks designed to identify binding sites in protein-ligand complexes using dipolar EPR distance distributions. The methodology is based on the approach described in the upcoming publication "Enhanced Binding Site Identification in Protein–Ligand Complexes with a Combined Blind Docking and Dipolar Electron Paramagnetic Resonance Approach" published in Journal of American Chemical Society and available at https://doi.org/10.1021/jacs.5c01274.
+![alt text](preview.png)
+
+
 This version of the repository contains an example script of the HSA-TCPP docking (Examples/TCPP). Two notebooks describe both blind and focused docking with the comparison with experimental EPR data.
 
-# To-Do
-1. Include a finished script for the modeling of distance distributions based on the MD trajectory
 # Protein-Ligand Binding Site Identification Based on Dipolar EPR Experiments
-This project contains Jupyter Notebooks designed to identify binding sites in protein-ligand complexes using dipolar EPR distance distributions. The methodology is based on the approach described in the upcoming publication "Enhanced Binding Site Detection in Protein-Ligand Complexes with a Combined Blind Docking and Dipolar EPR Approach" (to be published).
-![alt text](preview.png)
 
 ## Repository Contents
 This repository includes Jupyter Notebooks and helper scripts used for the binding site identification using dipolar EPR data.
@@ -54,4 +54,8 @@ It is critical to use the latest Meeko version (0.6.1) due to RDKit compatibilit
 ```
 pip install chilife
 pip install kneed
-``` 
+```
+
+# Citations
+
+If you find this approach or software useful in your work, we kindly request that you cite both the original paper describing the method (https://doi.org/10.1021/jacs.5c01274, proper citation will be added when available) as well as all the software used.
